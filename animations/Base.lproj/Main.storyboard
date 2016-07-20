@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="animations" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,114 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nicePicture" translatesAutoresizingMaskIntoConstraints="NO" id="7qG-1B-U9a">
+                                <rect key="frame" x="186" y="9" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5fa-oG-mlS"/>
+                                    <constraint firstAttribute="height" constant="128" id="XCq-cZ-0do"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIt-Pu-wUN">
+                                <rect key="frame" x="187" y="145" width="238" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="EQc-uY-wzb"/>
+                                    <constraint firstAttribute="width" constant="238" id="er4-9z-CxR"/>
+                                </constraints>
+                                <state key="normal" title="Sliding from left side"/>
+                                <connections>
+                                    <action selector="img1AnimationBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V1J-S6-omO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmw-tt-vrX">
+                                <rect key="frame" x="188" y="437" width="238" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="1F4-Da-KJV"/>
+                                    <constraint firstAttribute="height" constant="36" id="ecu-Tc-7nL"/>
+                                </constraints>
+                                <state key="normal" title="Bringing it with fade"/>
+                                <connections>
+                                    <action selector="im2AnimationBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XxT-CB-P3g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzq-EO-zmu">
+                                <rect key="frame" x="189" y="565" width="238" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="238" id="KFc-gb-Dvk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="Pcc-xr-ZVH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="238" id="WCO-eJ-ydA"/>
+                                    <constraint firstAttribute="height" constant="36" id="Xut-Kn-f9M"/>
+                                </constraints>
+                                <state key="normal" title="Make it bigger"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Pcc-xr-ZVH"/>
+                                        <exclude reference="WCO-eJ-ydA"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="img3AnimationBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nc6-ov-bV0"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nicePicture2" translatesAutoresizingMaskIntoConstraints="NO" id="ljg-hg-SLd">
+                                <rect key="frame" x="185" y="189" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="goJ-ci-rDf"/>
+                                    <constraint firstAttribute="height" constant="240" id="xY0-I6-hBZ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nicePicture3" translatesAutoresizingMaskIntoConstraints="NO" id="Gzd-Ce-CHq">
+                                <rect key="frame" x="189" y="481" width="236" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="CSy-tV-V8H"/>
+                                    <constraint firstAttribute="width" id="yyS-xk-mZC"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7qG-1B-U9a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="9" id="7ZJ-eI-odt"/>
+                            <constraint firstItem="7qG-1B-U9a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="2" id="93j-t2-53e"/>
+                            <constraint firstItem="Lmw-tt-vrX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MHA-eV-gqc"/>
+                            <constraint firstItem="iIt-Pu-wUN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nph-jd-FP4"/>
+                            <constraint firstItem="Lmw-tt-vrX" firstAttribute="top" secondItem="ljg-hg-SLd" secondAttribute="bottom" constant="8" id="OOC-7p-igg"/>
+                            <constraint firstItem="wzq-EO-zmu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OW2-Dc-sIa"/>
+                            <constraint firstItem="Gzd-Ce-CHq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VqE-lZ-tF5"/>
+                            <constraint firstItem="ljg-hg-SLd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WIh-Em-Qbc"/>
+                            <constraint firstItem="Gzd-Ce-CHq" firstAttribute="top" secondItem="Lmw-tt-vrX" secondAttribute="bottom" constant="8" id="ddw-VY-tlL"/>
+                            <constraint firstItem="Gzd-Ce-CHq" firstAttribute="top" secondItem="Lmw-tt-vrX" secondAttribute="bottom" constant="8" id="eb9-cR-wFA"/>
+                            <constraint firstItem="iIt-Pu-wUN" firstAttribute="top" secondItem="7qG-1B-U9a" secondAttribute="bottom" constant="5" id="gFb-MV-Z62"/>
+                            <constraint firstItem="Lmw-tt-vrX" firstAttribute="top" secondItem="ljg-hg-SLd" secondAttribute="bottom" constant="23" id="lTH-fE-8Hh"/>
+                            <constraint firstItem="wzq-EO-zmu" firstAttribute="top" secondItem="Gzd-Ce-CHq" secondAttribute="bottom" id="mbb-Na-2fE"/>
+                            <constraint firstItem="ljg-hg-SLd" firstAttribute="top" secondItem="iIt-Pu-wUN" secondAttribute="bottom" constant="5" id="oJd-Yp-iUQ"/>
+                            <constraint firstItem="iIt-Pu-wUN" firstAttribute="top" secondItem="7qG-1B-U9a" secondAttribute="bottom" constant="8" id="oPx-py-Htm"/>
+                            <constraint firstItem="7qG-1B-U9a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u7N-ag-HC8"/>
+                            <constraint firstItem="ljg-hg-SLd" firstAttribute="top" secondItem="iIt-Pu-wUN" secondAttribute="bottom" constant="8" id="zrR-LL-UI0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="93j-t2-53e"/>
+                                <exclude reference="gFb-MV-Z62"/>
+                                <exclude reference="oJd-Yp-iUQ"/>
+                                <exclude reference="lTH-fE-8Hh"/>
+                                <exclude reference="eb9-cR-wFA"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="img1" destination="7qG-1B-U9a" id="Ad5-Kf-8yS"/>
+                        <outlet property="img2" destination="ljg-hg-SLd" id="LQq-mo-LBv"/>
+                        <outlet property="img3" destination="Gzd-Ce-CHq" id="yjH-BW-1r4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nicePicture" width="247" height="204"/>
+        <image name="nicePicture2" width="500" height="500"/>
+        <image name="nicePicture3" width="660" height="330"/>
+    </resources>
 </document>
